@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/).
 
-## [unreleased] - YYYY-MM-DD
+## [unreleased] @YYYY-MM-DD
 
 ### Added
 
@@ -26,29 +26,13 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/).
 
 -
 
-## [0.7.1] - 2020-03-07
-
-### Added
-
-- _None_
-
-### Changed
-
-- _None_
-
-### Deprecated
-
-- _None_
-
-### Removed
-
-- _None_
+## [0.7.1] @2020-03-07
 
 ### Fixed
 
 - Fixes `print` issues and `data_loader` ([#1080](https://github.com/PyTorchLightning/pytorch-lightning/pull/1080))
 
-## [0.7.0] - 2020-03-06
+## [0.7.0] @2020-03-06
 
 ### Added
 
@@ -121,7 +105,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/).
 - Fixed comet logger to log after train ([#892](https://github.com/PyTorchLightning/pytorch-lightning/pull/892))
 - Remove deprecated args to learning rate step function ([#890](https://github.com/PyTorchLightning/pytorch-lightning/pull/890))
 
-## [0.6.0] - 2020-01-21
+## [0.6.0] @2020-01-21
 
 ### Added
 
@@ -178,7 +162,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/).
 - Fixed a bug where checkpoint writing could exit before completion, giving incomplete checkpoints ([#689](https://github.com/PyTorchLightning/pytorch-lightning/pull/689))
 - Fixed a bug where `on_train_end` was not called when ealy stopping ([#723](https://github.com/PyTorchLightning/pytorch-lightning/pull/723))
 
-## [0.5.3] - 2019-11-06
+## [0.5.3] @2019-11-06
 
 ### Added
 
@@ -209,10 +193,6 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/).
 
 - Deprecated `tng_dataloader`
 
-### Removed
-
-- _None_
-
 ### Fixed
 
 - Fixed an issue where the number of batches was off by one during training
@@ -224,7 +204,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/).
 - Fixed a bug when using the `log_gpu_memory='min_max'` option in `Trainer`
 - Fixed a bug where checkpointing would sometimes erase the current directory
 
-## [0.5.2] - 2019-10-10
+## [0.5.2] @2019-10-10
 
 ### Added
 
@@ -234,10 +214,6 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/).
 ### Changed
 
 - Changed default for `amp_level` to `O1`
-
-### Deprecated
-
-- _None_
 
 ### Removed
 
@@ -250,7 +226,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/).
 - Fixed callback metric errors in DDP
 - Fixed a bug where `TestTubeLogger` didn't log to the correct directory
 
-## [0.5.1] - 2019-10-05
+## [0.5.1] @2019-10-05
 
 ### Added
 
@@ -270,14 +246,6 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/).
 - Disabled auto GPU loading when restoring weights to prevent out of memory errors
 - Changed logging, early stopping and checkpointing to occur by default
 
-### Deprecated
-
-- _None_
-
-### Removed
-
-- _None_
-
 ### Fixed
 
 - Fixed a bug with samplers that do not specify `set_epoch`
@@ -285,11 +253,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/).
 - Fixed a bug where gradient norms were alwasy zero using `track_grad_norm`
 - Fixed a bug which causes a crash when logging memory
 
-## [0.5.0] - 2019-09-26
-
-### Added
-
-- _None_
+## [0.5.0] @2019-09-26
 
 ### Changed
 
@@ -300,19 +264,11 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/).
 - Changed `gradient_clip` argument to `gradient_clip_val`
 - Changed `add_log_row_interval` to `row_log_interval`
 
-### Deprecated
-
-- _None_
-
-### Removed
-
-- _None_
-
 ### Fixed
 
 - Fixed a bug with tensorboard logging in multi-gpu setup
 
-## [0.4.9] - 2019-09-16
+## [0.4.9] @2019-09-16
 
 ### Added
 
@@ -329,20 +285,12 @@ memory utilization
 - Changed gpu API to take integers as well (e.g. `gpus=2` instead of `gpus=[0, 1]`)
 - All models now loaded on to CPU to avoid device and out of memory issues in PyTorch
 
-### Deprecated
-
-- _None_
-
-### Removed
-
-- _None_
-
 ### Fixed
 
 - Fixed a bug where data types that implement `.to` but not `.cuda` would not be properly moved onto the GPU
 - Fixed a bug where data would not be re-shuffled every epoch when using a `DistributedSampler`
 
-## [0.4.8] - 2019-08-31
+## [0.4.8] @2019-08-31
 
 ### Added
 
@@ -350,40 +298,16 @@ memory utilization
 - Added `GradientAccumulationScheduler` callback which can be used to schedule changes to the number of accumulation batches
 - Added option to skip the validation sanity check by setting `nb_sanity_val_steps = 0`
 
-### Changed
-
-- _None_
-
-### Deprecated
-
-- _None_
-
-### Removed
-
-- _None_
-
 ### Fixed
 
 - Fixed a bug when setting `nb_sanity_val_steps = 0`
 
-## [0.4.7] - 2019-08-24
-
-### Added
-
-- _None_
+## [0.4.7] @2019-08-24
 
 ### Changed
 
 - Changed the default `val_check_interval` to `1.0`
 - Changed defaults for `nb_val_batches`, `nb_tng_batches` and `nb_test_batches` to 0
-
-### Deprecated
-
-- _None_
-
-### Removed
-
-- _None_
 
 ### Fixed
 
@@ -395,52 +319,24 @@ memory utilization
 - Fixed a bug when loading data as a tuple
 - Fixed a bug where `AttributeError` could be suppressed by the `Trainer`
 
-## [0.4.6] - 2019-08-15
+## [0.4.6] @2019-08-15
 
 ### Added
 
 - Added support for data to be given as a `dict` or `list` with a single gpu
 - Added support for `configure_optimizers` to return a single optimizer, two list (optimizers and schedulers), or a single list
 
-### Changed
-
-- _None_
-
-### Deprecated
-
-- _None_
-
-### Removed
-
-- _None_
-
 ### Fixed
 
 - Fixed a bug where returning just an optimizer list (i.e. without schedulers) from `configure_optimizers` would throw an `Exception`
 
-## [0.4.5] - 2019-08-13
+## [0.4.5] @2019-08-13
 
 ### Added
 
 - Added `optimizer_step` method that can be overridden to change the standard optimizer behaviour
 
-### Changed
-
-- _None_
-
-### Deprecated
-
-- _None_
-
-### Removed
-
-- _None_
-
-### Fixed
-
-- _None_
-
-## [0.4.4] - 2019-08-12
+## [0.4.4] @2019-08-12
 
 ### Added
 
@@ -452,86 +348,30 @@ memory utilization
 - `validation_step` and `val_dataloader` are now optional
 - `lr_scheduler` is now activated after epoch
 
-### Deprecated
-
-- _None_
-
-### Removed
-
-- _None_
-
 ### Fixed
 
 - Fixed a bug where a warning would show when using `lr_scheduler` in `torch>1.1.0`
 - Fixed a bug where an `Exception` would be thrown if using `torch.DistributedDataParallel` without using a `DistributedSampler`, this now throws a `Warning` instead
 
-## [0.4.3] - 2019-08-10
-
-### Added
-
-- _None_
-
-### Changed
-
-- _None_
-
-### Deprecated
-
-- _None_
-
-### Removed
-
-- _None_
+## [0.4.3] @2019-08-10
 
 ### Fixed
 
 - Fixed a bug where accumulate gradients would scale the loss incorrectly
 
-## [0.4.2] - 2019-08-08
-
-### Added
-
-- _None_
+## [0.4.2] @2019-08-08
 
 ### Changed
 
 - Changed install requirement to `torch==1.2.0`
 
-### Deprecated
-
-- _None_
-
-### Removed
-
-- _None_
-
-### Fixed
-
-- _None_
-
-## [0.4.1] - 2019-08-08
-
-### Added
-
-- _None_
+## [0.4.1] @2019-08-08
 
 ### Changed
 
 - Changed install requirement to `torch==1.1.0`
 
-### Deprecated
-
-- _None_
-
-### Removed
-
-- _None_
-
-### Fixed
-
-- _None_
-
-## [0.4.0] - 2019-08-08
+## [0.4.0] @2019-08-08
 
 ### Added
 
@@ -542,10 +382,6 @@ memory utilization
 
 - Changed `training_step` and `validation_step`, outputs will no longer be automatically reduced
 
-### Deprecated
-
-- _None_
-
 ### Removed
 
 - Removed need for `Experiment` object in `Trainer`
@@ -554,60 +390,26 @@ memory utilization
 
 - Fixed issues with reducing outputs from generative models (such as images and text)
 
-## [0.3.6.1] - 2019-07-27
-
-### Added
-
-- _None_
-
-### Changed
-
-- _None_
-
-### Deprecated
-
-- _None_
-
-### Removed
-
-- _None_
-
-### Fixed
-
-- Fixed a bug where `Experiment` object was not process safe, potentially causing logs to be overwritten
-
-## [0.3.6] - 2019-07-25
+## [0.3.6] @2019-07-25
 
 ### Added
 
 - Added a decorator to do lazy data loading internally
 
-### Changed
-
-- _None_
-
-### Deprecated
-
-- _None_
-
-### Removed
-
-- _None_
-
 ### Fixed
 
-- _None_
+- Fixed a bug where `Experiment` object was not process safe, potentially causing logs to be overwritten
 
-## [0.3.5] - 2019-MM-DD
+## [0.3.5] @2019-MM-DD
 
-## [0.3.4] - 2019-MM-DD
+## [0.3.4] @2019-MM-DD
 
-## [0.3.3] - 2019-MM-DD
+## [0.3.3] @2019-MM-DD
 
-## [0.3.2] - 2019-MM-DD
+## [0.3.2] @2019-MM-DD
 
-## [0.3.1] - 2019-MM-DD
+## [0.3.1] @2019-MM-DD
 
-## [0.2.x] - YYYY-MM-DD
+## [0.2.x] @YYYY-MM-DD
 
-## [0.1.x] - YYYY-MM-DD
+## [0.1.x] @YYYY-MM-DD
